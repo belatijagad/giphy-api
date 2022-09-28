@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Button from './components/Button';
-import Display from './components/Display';
+// import Display from './components/Display';
 import Footer from './components/Footer';
 import Search from './components/Search';
 
@@ -56,7 +56,18 @@ export default function Home(initialData) {
           <Button />
         </form>
         <Search searchTerm={searchTerm} />
-        <Display element={searchResults} />
+        <div className="flex flex-wrap gap-4 justify-center">
+          {searchResults.map((each, index) => {
+            return (
+              <div key={index} className="md:w-[30%] w-[40%]">
+                <img
+                  src={each.images.original.url} alt={each.title}
+                  className="w-full"
+                />
+              </div>
+            )
+          })}
+        </div>
         <Footer />
       </div>
     </div>
