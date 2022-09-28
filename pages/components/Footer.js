@@ -12,11 +12,13 @@ export default function Footer() {
                         src={NextIcon}
                         height={50}
                         width={50}
+                        alt="Tailwind Icon"
                     />
                     <Image
                         src={TailwindIcon}
                         height={50}
                         width={50}
+                        alt="Tailwind Icon"
                     />
                 </div>
             </div>
